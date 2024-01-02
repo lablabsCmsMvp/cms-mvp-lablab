@@ -8,7 +8,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 // Replace with your Public API Key
-builder.init(YOUR_API_KEY);
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 // Define a function that fetches the Builder
 // content for a given page
@@ -48,6 +48,9 @@ export async function getStaticPaths() {
     fallback: 'blocking',
   };
 }
+
+import '../builder-registry';
+
 
 // Define the Page component
 export default function Page({ page }: { page: BuilderContent | null }) {
