@@ -1,5 +1,12 @@
-type MyProps = { content: string; link: string }
 import React, { useState, useEffect } from 'react';
+
+type Post = {
+    id: number;
+    title: string;
+    body: string;
+};
+
+type MyProps = { content: string; link: string };
 
 // Any component in your codebase
 function FetchData(props: MyProps) {
