@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-type post = {
+type Post = {
     id: number;
     title: string;
     body: string;
