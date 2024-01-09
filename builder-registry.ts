@@ -15,12 +15,12 @@ Builder.registerComponent(
 );
 
 Builder.registerComponent(
-  dynamic(() => import("./components/MyButton/MyButton")),
+  dynamic(() => import("./components/FetchData/FetchData")),
   {
-  name: 'MyButton',
-  inputs: [
-    // 'name' is the name of your prop
-    { name: 'content', type: 'text' },
-    { name: 'link', type: 'url' },
-  ],
-})
+    name: "FetchData",
+    inputs: [
+      { name: "Title", type: "string" },
+      { name: "body", type: "string" },
+    ],
+  }
+);
